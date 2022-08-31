@@ -1,0 +1,17 @@
+$tinyMobile: 350px;
+$smallMobile: 400px;
+$mobile: 544px;
+$ipad: 768px;
+// $smallScreen: 992px;
+$smallScreen: 1050px;
+$largeScreen: 1200px;
+
+@media (min-width: $tinyMobile ) and (max-width: $smallScreen ){
+  // .mat-sidenav {
+  //   display: none;
+  // }
+  .all-nav{
+    display: none;
+  }
+
+}

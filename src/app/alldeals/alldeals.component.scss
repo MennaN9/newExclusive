@@ -1,0 +1,79 @@
+img{
+  width: 120px;
+  height: 120px;
+}
+ .brand-name {
+  font-size: 25px;
+  font-weight: 800;
+  // line-height: 42px;
+  color: #0b579c;
+
+}
+.card-body h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0b579c;
+}
+.card-body li {
+  color: rgb(155 153 153);
+}
+.bg-img{
+  background-color: var(--primary-color);
+}
+.btn-close{
+  border: 1px solid  var(--primary-color) !important;
+  color:  var(--primary-color) !important;
+}
+.diverr{
+  border-top: 2px solid var(--primary-color) !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+i{
+  color: #9b9999;
+}
+.logo{
+  height: 70px;
+}
+.phone{
+  height: 45px;
+}
+.days-left{
+  background-color: red;
+  color:white;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+}
+.activeCat , .active{
+  background-color: var(--primary-color);
+  color:#fff;
+}
+// .category:active {
+//   background-color: var(--primary-color);
+//   color:#fff;
+// }
+::ng-deep #alldeals .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #fff !important;
+  width: 100%;
+ }
+
+ ::ng-deep #alldeals  .mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #fff !important;
+  width: 100%;
+}
+
+::ng-deep #alldeals .mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #fff !important;
+ width: 100%;
+}
+@media(max-width:300px){
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}
+

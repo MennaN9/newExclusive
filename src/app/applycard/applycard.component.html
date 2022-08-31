@@ -1,0 +1,89 @@
+<div class="header-pages d-flex justify-content-center align-items-center">
+  <p class="title-h1">{{'works.GET THE CAED'|translate}}</p>
+</div>
+<section class="pt-5 home-exclusive-card">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <i class="fas fa-percentage home-icon"></i>
+    <p class="card-title font-weight-bold mt-3 home-text m-3">{{"home.THE XCLUSIVES CARD" | translate}}</p>
+    <p class="mt-2"> {{'home.Your' | translate}}<strong> {{'home.Xclusives Card®' | translate}}</strong>
+      {{'home.entitles you to up to' | translate}}<strong> {{'home.35% discounts and refunds' |
+        translate}}</strong>{{'home.at any of our merchants from our network' | translate}}.
+    </p>
+    <P> {{'home.You also get a complementary' | translate}}<strong> {{'home.Super Value Voucher' | translate}}</strong>
+      {{'home.Booklet with your card along with access to the' | translate}}
+      <strong>{{'home.Deals' | translate}}</strong>
+      {{'home.section in the' | translate}}<strong>{{'home.Xclusives App' | translate}}</strong>!
+    </P>
+  </div>
+  <div class="d-flex  justify-content-center">
+    <img src="../../assets/img/Card-2.png" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+      data-aos-duration="1200" data-aos-easing="ease-in-out" class="card-img-home" alt="">
+  </div>
+  <app-sectionthree></app-sectionthree>
+</section>
+<section class="download  d-flex flex-column justify-content-center align-items-center">
+  <i class="fas fa-pen"></i>
+  <p class="first-card text-center font-28 pt-2">{{'cards.p' | translate}}!</p>
+  <div class="diver"></div>
+  <p class="second pt-1">{{'cards.p2' | translate}}
+  </p>
+</section>
+
+<div class="container">
+  <form class="example-form" #form="ngForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input [(ngModel)]="CustomerCard.CustomerName" matInput name="Name" #Name="ngModel" required>
+        </mat-form-field>
+
+        <div *ngIf="form.submitted && Name.invalid && Name.touched && Name.dirty" class="invalid-feedback"></div>
+
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Email Address</mat-label>
+          <input [(ngModel)]="CustomerCard.Email" email="true" matInput name="email" #email="ngModel" required>
+
+          <div *ngIf="form.submitted && email.invalid && email.touched && email.dirty" class="invalid-feedback"></div>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input [(ngModel)]="CustomerCard.Mobile" BlockPaste numberOnly matInput name="Mobile" #Mobile="ngModel" required>
+          <div *ngIf="form.submitted && Mobile.invalid && Mobile.touched && Mobile.dirty" class="invalid-feedback"></div>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Customer Type</mat-label>
+          <mat-select (selectionChange)="selectedCustomerType($event)" name="Type" #Type="ngModel" [(ngModel)]="model.Type" required>
+            <mat-option [value]="1">
+              New Member
+            </mat-option>
+            <mat-option [value]="2">
+              Already a Member (Renewal)
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngIf="form.submitted && Type.invalid && Type.touched && Type.dirty" class="invalid-feedback"></div>
+      </div>
+    </div>
+
+
+    <!-- <div class="row mt-3">
+      <div class="col-sm-12 mb-2">
+        <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+        <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
+          <div *ngIf="recaptcha.errors?.required">This field is required.</div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <button type="submit" mat-button
+      class="btn btn-xclusive-stepper rounded  btn-lg mb-5 mt-2" (click)="send(form)">Send</button>
+  </form>
+</div>

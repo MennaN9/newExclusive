@@ -1,0 +1,85 @@
+<footer>
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-3 col-lg-3 col-sm-12">
+        <span style="color: #ffffff;">{{'footer.More' | translate}}</span>
+        <ul class="mt-2" *ngIf="('currentTheme' | translate ) === 'rtl'">
+          <li routerLink="/about" class="pointer"><i class="fas fa-angle-right"></i> {{'footer.About Us' | translate}}
+          </li>
+          <li class="pointer" routerLink="copyrights"><i class="fas fa-angle-right"></i> {{'footer.Copyrights' |
+            translate}}</li>
+          <li class="pointer" routerLink="policy"><i class="fas fa-angle-right"></i> {{'footer.Privacy Policy' |
+            translate}}</li>
+        </ul>
+        <ul class="mt-2" *ngIf="('currentTheme' | translate ) === 'ltr'">
+          <li routerLink="/about" class="pointer"><i class="fas fa-angle-left"></i> {{'footer.About Us' | translate}}
+          </li>
+          <li class="pointer" routerLink="copyrights"><i class="fas fa-angle-left"></i>{{'footer.Copyrights' |
+            translate}}</li>
+          <li class="pointer" routerLink="policy"><i class="fas fa-angle-left"></i> {{'footer.Privacy Policy' |
+            translate}}</li>
+        </ul>
+      </div>
+      <div class="col-md-5 col-lg-5 col-sm-12 d-flex flex-column  align-items-center">
+        <span style="color: #ffffff;"> {{'home.DOWNLOAD THE APP' | translate}}</span>
+        <div class="">
+          <a href="https://apps.apple.com/eg/app/xclusivescard/id639390165" target="_blank" rel="noopener noreferrer">
+            <img src="../../../assets/img/Xclusives-App-iOS-Download-Button-White-162x56.png" class=" footer-img"
+              alt="">
+          </a>
+          <span class="m-2"></span>
+          <a href="https://play.google.com/store/apps/details?id=com.olit.xclusivescard" target="_blank"
+            rel="noopener noreferrer"> <img
+              src="../../../assets/img/Xclusives-App-Android-Download-Button-White-162x56.png" class=" footer-img"
+              alt=""></a>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <span style="color: #ffffff;"> {{'footer.HOTLINE' | translate}}</span>
+        <div>
+          <img class="mt-1" [src]="footerimg" alt="">
+        </div>
+        <p style="color: #ffffff;" class="mt-2">{{'footer.all' | translate}}</p>
+      </div>
+    </div>
+    <div class="footerdiver">
+    </div>
+    <div class="py-4 d-flex justify-content-center align-items-center">
+
+      <a href="https://www.facebook.com/Xclusivescard" target="_blank" rel="noopener noreferrer"> <i
+          class="fab fa-facebook-f m-3"></i> </a>
+      <a href="https://www.instagram.com/xclusivescard" target="_blank" rel="noopener noreferrer"> <i
+          class="fab fa-instagram m-3"></i></a>
+      <a href="https://twitter.com/Xclusives_Card" target="_blank" rel="noopener noreferrer"> <i
+          class="fab fa-twitter m-3"></i></a>
+      <a href="https://www.youtube.com/channel/UC25u6mLcjWPjsJyzutAxusw" target="_blank" rel="noopener noreferrer"> <i
+          class="fab fa-youtube m-3"></i></a>
+      <a href="https://www.linkedin.com/company/xclusives" target="_blank" rel="noopener noreferrer"> <i
+          class="fab fa-linkedin-in m-3"></i></a>
+
+
+
+
+    </div>
+    <div class="py-4 text-center text-white">
+      {{'footer.copy' | translate}}
+    </div>
+  </div>
+  <!-- <div class="scroll position-absolute">
+    <a><img class="img-fluid" src="../../assets/img/scroll-down.gif" alt=""></a>
+  </div> -->
+  <div class="fixed-icons">
+    <div class="settings position-fixed d-flex justify-content-center align-items-center">
+      <a><i class="fas fa-cog text-white rotate"></i></a>
+    </div>
+    <!-- <div class="up main-backcolor position-fixed d-flex justify-content-center align-items-center"
+      [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()">
+      <a>
+        <i class="fas fa-chevron-up text-white"></i>
+      </a>
+    </div> -->
+  </div>
+  <!-- <button [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()" class="scroll-to-top">
+    Scroll To Top
+  </button> -->
+</footer>

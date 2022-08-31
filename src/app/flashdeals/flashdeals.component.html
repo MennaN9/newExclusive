@@ -1,0 +1,217 @@
+<!-- <div class="header-pages d-flex justify-content-center align-items-center">
+  <h1 class="title-h1">MONTHLY DEALS</h1>
+</div> -->
+<div id="flash">
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <span>{{'navbar.Flash Deals' | translate}}</span>
+      <div>
+        <mat-search-bar [(ngModel)]="chainNameSearch" (onEnter)="search()"></mat-search-bar>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <owl-carousel-o [options]="customOptions1">
+          <ng-container *ngFor="let ChainCategory of getAllDataWeb?.ChainCategory;let i=index;">
+            <ng-template carouselSlide *ngIf="ChainCategory.CategoryID!=14">
+              <div class="category rounded-pill  text-center"
+                [ngClass]="{'activeCat':  ChainCategory.CategoryID == idClick}"
+                (click)="onSlideChange($event,ChainCategory.CategoryID)">
+                <span>{{dir=='ltr'?ChainCategory.CategoryNameEN:ChainCategory.CategoryNameAR}}</span>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+      <div class="diverr">
+      </div>
+      <div class="row">
+        <div class="d-flex justify-content-around align-items-center" (click)="onButtonGroupClick($event)">
+          <button class="col-sm col-lg-3 btn category  category2 rounded-pill max-width-96  text-center m-1"
+            (click)="mostPopular()">
+            {{'Most Popular'|translate}}
+          </button>
+          <button class=" col-sm btn col-lg-3 category category2 rounded-pill max-width-96  text-center m-1"
+            (click)="aToZ()">
+            
+            {{'A-Z'|translate}}
+          </button>
+          <button class="col-sm  col-lg-3 btn category category2 rounded-pill max-width-96  text-center m-1"
+            (click)="bestValue()">
+            
+            {{'Best Value'|translate}}
+          </button>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <!-- <div class="d-flex justify-content-center">
+          <form>
+            <mat-search-bar></mat-search-bar>
+          </form>
+        </div> -->
+        <div class="col-11 py-3 " *ngFor="let Chain of evoucherWeb;let i=index;">
+          <div class="card rounded shadow">
+            <div class="card-body py-4">
+              <div class="row ">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class=" brand-name">{{dir=='ltr'?Chain.ChainNameEN:Chain.ChainNameAR}}</p>
+                  <div class="card-brand-img">
+                    <img [src]="Chain.LayoutTypeID==1?Chain.UrlImage:Chain.UrlBrandImage"
+                      (click)="toBrandDetails(Chain?.ChainID)" routerLink="/moredetails"
+                      class="rounded-circle shadow pointer" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="d-flex justify-content-between">
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <strong>{{Chain.XEVoucherValue}}</strong><small>&nbsp;{{'EGP' | translate }}</small>
+                    <p class="mt-1"> {{dir=='ltr'?Chain.XEvoucherDescriptionEN:Chain.XEvoucherDescriptionAR}}</p>
+                    <!-- <span class="main-color">Deal Ends In:</span> -->
+                    <span class="main-color">{{'DealEndsIn' | translate }}:</span>
+                    <!-- <div class="d-flex justify-content-start">
+                      <span class="">
+                        <span class="rounded time-box d-flex flex-column justify-content-center align-items-center">
+                          <p>{{getDifferenceInDays(Chain.XEvoucherEndDate)}}</p>
+                          <p>Day</p>
+                        </span>
+                      </span>
+                      <span class="">
+                        <span class=" rounded time-box d-flex flex-column justify-content-center align-items-center">
+                          <p>{{getDifferenceInHours(Chain.XEvoucherEndDate)}}</p>
+                          <p>Hour</p>
+                        </span>
+                      </span>
+                      <span class="">
+                        <span class="rounded time-box d-flex flex-column justify-content-center align-items-center">
+                          <p>{{getDifferenceInMinutes(Chain.XEvoucherEndDate)}}</p>
+                          <p>Minute</p>
+                        </span>
+                      </span>
+                      <span class="">
+                        <span class="rounded time-box d-flex flex-column justify-content-center align-items-center">
+                          <p>{{getDifferenceInSeconds(Chain.XEvoucherEndDate)}}</p>
+                          <p>second</p>
+                        </span>
+                      </span>
+                    </div> -->
+                    <div class="row">
+                      <div class="times d-flex justify-content-start align-self-stretch">
+                        <span class=" time">
+                          <p class="Days">{{getDifferenceInDays(Chain.XEvoucherEndDate)}}</p>
+                          <p>{{'Day' | translate}}</p>
+                        </span>
+                        <span  class="  time">
+                          <p class="Hours">{{getDifferenceInHours(Chain.XEvoucherEndDate)}}</p>
+                          <p>{{'Hour' | translate}}</p>
+                        </span>
+                        <span class="  time">
+                          <p class="Minutes" >{{getDifferenceInMinutes(Chain.XEvoucherEndDate)}}</p>
+                          <!-- <p >{{getDifferenceInMinutes(Chain.XEvoucherEndDate)}}</p> -->
+                          <p>{{'Minute' | translate}}</p>
+                        </span>
+                        <span class=" time" >
+                          <p class="Seconds" Times>{{getDifferenceInSeconds(Chain.XEvoucherEndDate)}}</p>
+                          <!-- <p >{{getDifferenceInSeconds(Chain.XEvoucherEndDate)}}</p> -->
+                          <p>{{'second' | translate}}</p>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- (click)="openDialog()"  -->
+                    <div class="collapse" id="collapseExample">
+                      <div class="d-flex justify-content-start align-items-center mt-3">
+                        <div class="col col-lg-2  category w-100 rounded-pill m-1 text-center" data-bs-toggle="modal"
+                          data-bs-target="#exampleModal">
+                          {{'Redeem'|translate}}
+                        </div>
+                        <div class="col col-lg-2 category  w-100 rounded-pill m-1  text-center" data-bs-toggle="modal"
+                          data-bs-target="#share" (click)="openShare(Chain.XEVoucherID)">
+                          {{'Share'|translate}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-brand-img">
+                    <img *ngIf="Chain.LayoutTypeID==3" [src]="Chain.UrlBrandProductImage"
+                      (click)="toBrandDetails(Chain?.ChainID)" routerLink="/moredetails"
+                      class="rounded-circle shadow pointer mt-3" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex  justify-content-end">
+                <a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                  aria-controls="collapseExample">
+                  <i class=" fas fa-angle-down pointer"></i>
+                </a>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div tabindex="-1" class="modal fade" id="share">
+  <div class=" modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">share</h5>
+        <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="">
+
+          <div class="container-fluid d-flex justify-content-center">
+            <share-buttons theme="circles-dark"
+                           [include]="['copy', 'facebook','messenger','twitter','whatsapp']"
+                           [showIcon]="true"
+                           [showText]="false"
+                           url={{URLEvoucher}}
+                           description="Share Evoucher"
+                           twitterAccount="rodrigokamada"
+                           class="m-1 color-btn">
+            </share-buttons>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div tabindex="-1" class="modal fade" id="exampleModal">
+  <div class=" modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title">Modal title</h5> -->
+        <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <img src="../../assets/img/xclusives_logo.png" class="w-100" alt="">
+          <p>To redeem this deal, you have to either link your Xclusives Card or become an Xclusives member</p>
+          <p>Facing difficulties? Please reach us on</p>
+          <div class="">
+            <img src="../../assets/img/xclusives_hotline.png" class="w-100 phone" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="d-flex align-self-stretch">
+        <button type="button" class=" btn btn-xclusive-main  btn-lg" data-bs-dismiss="modal" (click)="CheckDeviceType()">Download
+          Xclusives App
+        </button>
+        <button type="button" class=" btn btn-xclusive-second  btn-lg" data-bs-dismiss="modal" routerLink="/apply">Get an Xclusives card</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<ngx-spinner size="medium" type='ball-clip-rotate'></ngx-spinner>
+-->

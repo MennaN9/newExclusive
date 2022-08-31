@@ -1,0 +1,78 @@
+<div class="container py-5">
+  <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit(form)" autocomplete="off">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input [(ngModel)]="ticketComplaint.Name" matInput formControlName="Name">
+        </mat-form-field>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile</mat-label>
+          <input [(ngModel)]="ticketComplaint.Mobile" BlockPaste numberOnly matInput formControlName="Mobile">
+        </mat-form-field>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="ticketComplaint.Email" email="true" matInput formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>ComplaintDetails</mat-label>
+          <input [(ngModel)]="ticketComplaint.TicketDetails" matInput formControlName="ComplaintDetails">
+        </mat-form-field>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <mat-select (ngModelChange)="SubCategory($event)" formControlName="selectCategory">
+            <mat-option *ngFor="let Category of allCategory" [value]="Category.ID">
+              {{Category.Name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Sub Category</mat-label>
+          <mat-select (selectionChange)="selectedSubCategory($event)" formControlName="selectSubCategory">
+            <mat-option *ngFor="let SubCategory of allSubCategories" [value]="SubCategory.ID">
+              {{SubCategory.Name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <mat-form-field appearance="fill">
+          <mat-label>Gender</mat-label>
+          <mat-select (selectionChange)="selectedGender($event)" formControlName="selectGender">
+            <mat-option [value]="1">
+              Male
+            </mat-option>
+            <mat-option [value]="2">
+              Female
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- <div class="row">
+        <mat-radio-group aria-label="Select an option" formControlName="Gendar">
+          <mat-radio-button value="1" (change)="onGenderChange(1)">Male</mat-radio-button>
+          <mat-radio-button value="2" (change)="onGenderChange(2)">Female</mat-radio-button>
+        </mat-radio-group>
+      </div> -->
+
+    </div>
+    <!-- <button type="submit" mat-button [disabled]="form.status != 'VALID'" -->
+    <button type="submit" mat-button class="btn btn-xclusive-stepper rounded  btn-lg mb-5 mt-2">Save</button>
+  </form>
+</div>

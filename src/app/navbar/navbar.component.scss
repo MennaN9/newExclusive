@@ -1,0 +1,52 @@
+
+// .nav .material-icons{
+//   color: var(--primary-color) !important;
+//   //padding: 5px;
+// }
+
+
+.top-sidenav{
+  background-color: #fff;
+  color:var(--primary-color);
+  height: 70px;
+}
+ .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 111111111;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s all ease-in-out;
+  padding-top: 10px;
+  list-style: none;
+}
+
+
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: var(--primary-color);
+  display: block;
+  transition: all 0.3s ease-in-out;
+  font-family: Montserrat-bold !important;
+  font-size: 14px;
+}
+
+.sidenav a:hover {
+  color: #00acd3;
+}
+
+[dir="rtl"] .sidenav .closebtn {
+  position: absolute;
+  right: 0;
+  font-size: 36px;
+}
+[dir="ltr"] .sidenav .closebtn {
+  position: absolute;
+  left: 0;
+  font-size: 36px;
+}

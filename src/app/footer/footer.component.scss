@@ -1,0 +1,50 @@
+footer{
+  background-color: #333333FF;
+  span{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  ul li{
+    color:white;
+    list-style: none;
+    text-indent: -1.2em;
+    font-size: 16px;
+    margin-bottom: 0.7em;
+  }
+  // ul>li:before {
+  //   font-family: 'thegem-icons';
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   content: '\f105';
+  //   font-size: 16px;
+  //   vertical-align: top;
+  //   display: inline-block;
+  //   width: 21px;
+  //   text-indent: 0;
+  //   color:white;
+  // }
+  .footerdiver{
+  border:1px solid white;
+  }
+  i{
+    color:white;
+    font-size: 20px;
+  }
+}
+
+.scroll {
+  bottom: 5%;
+  width: 30px;
+  left: 50%;
+  transform: translatex(-50%) rotate(180deg);
+}
+.fixed-icons .up {
+  bottom: 2%;
+  right: 1%;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+.main-backcolor {
+  background: linear-gradient(to right bottom, rgb(11, 87, 156), rgb(0, 172, 211));
+}

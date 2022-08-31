@@ -1,0 +1,17 @@
+.card-img-home{
+  width: 400px;
+  height:  400px;
+}
+
+.diver {
+  border-top: 1px solid #ebebeb;
+  width: 10% !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px){
+  .card-img-home{
+    width: 220px;
+    height:  220px;
+  }
+}

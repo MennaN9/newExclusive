@@ -1,0 +1,321 @@
+<!-- <section class="tabs-container">
+  <span class="change-btn prev" (click)="scrollTab(-1)" [class.hide]="atStart">
+    &lsaquo;</span>
+
+  <ul class="tabs" [ngStyle]="{'transform': abc }">
+
+    <ng-container *ngFor="let tab of tabs; let i=index">
+      <li class="tab" [class.active]="selectedIndex===i" (click)="selectTab(i)">{{tab}}</li>
+    </ng-container>
+  </ul>
+  <span class="change-btn next" [class.hide]="atEnd" (click)="scrollTab(1)">&rsaquo;</span>
+
+</section> -->
+
+<!-- <app-scrollable-tabs [tabs]="tabs" (emitSelectedTab)="selectedTab($event)"></app-scrollable-tabs> -->
+
+
+
+<section class="p-2" id="sectionTwo">
+  <owl-carousel-o [options]="customOptions1">
+    <ng-container>
+      <ng-template carouselSlide>
+
+        <!-- <div class="category rounded-pill  text-center"> -->
+
+        <section class="p-3 two mt-2 monthly-deals">
+          <div class="p-2 d-flex justify-content-between align-items-center main-color-text">
+            <h4 class="font-weight-bold pointer red-color mb-3 fa-25" routerLink="/alldeals">{{'home.Monthly Deals'|
+              translate}}
+            </h4>
+            <i *ngIf="('currentTheme' | translate ) === 'ltr'" routerLink="/alldeals"
+              class="fas fa-arrow-right pointer red-color fa-25"></i>
+            <i *ngIf="('currentTheme' | translate ) === 'rtl'" routerLink="/alldeals"
+              class="fas fa-arrow-left pointer red-color fa-25"></i>
+          </div>
+          <owl-carousel-o class="py-5 mt-2" [options]="customOptions2">
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer owl-lazy" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer owl-lazy" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class=" rounded-pill text-center" routerLink="/moredetails">
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                  <img src="../../../assets/img/Logo_2019_12_25_035514_Mazaya Logo (1).jpg" routerLink="/moredetails"
+                    class="rounded-circle pointer" alt="...">
+                  <span routerLink="/moredetails" class="pointer title">name</span>
+                  <span routerLink="/moredetails" class="pointer price">1000 EGP</span>
+                </div>
+              </div>
+            </ng-template>
+
+          </owl-carousel-o>
+        </section>
+        <!-- </div> -->
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Specials </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Dining </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Entertainment </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Automotive </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Pharmacies </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Labs </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Fashion </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Footwear </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Eywear </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Home </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Beauty </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Travel </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Hospital </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Dental </a>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="category rounded-pill  text-center">
+          <a href="#"> Medical </a>
+        </div>
+      </ng-template>
+
+    </ng-container>
+  </owl-carousel-o>
+</section>

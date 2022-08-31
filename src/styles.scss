@@ -1,0 +1,513 @@
+// @import "~typicons.font/src/font/typicons.css";
+// @import "~ionicons/dist/css/ionicons.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+// @import "~flag-icon-css/css/flag-icon.min.css";
+// @import "~@ng-select/ng-select/themes/default.theme.css";
+// @import "~@ng-select/ng-select/themes/material.theme.css";
+
+
+
+
+// Bootstrap variable overrides
+@import "./assets/scss/bootstrap/variables";
+@import "./assets/scss/bootstrap/mixins";
+
+/* ############### BOOTSTRAP FRAMEWORK ############### */
+@import "~bootstrap/scss/bootstrap";
+
+/* ############### Compass Mixins ############### */
+@import "~compass-mixins/lib/compass";
+@import "~compass-mixins/lib/animate";
+
+// Custom variables and mixins
+@import "./assets/scss/custom/variables";
+@import "./assets/scss/custom/mixins";
+
+/* ########## BOOTSTRAP OVERRIDES ########## */
+@import "./assets/scss/bootstrap/accordion";
+@import "./assets/scss/bootstrap/alerts";
+@import "./assets/scss/bootstrap/badge";
+@import "./assets/scss/bootstrap/breadcrumb";
+@import "./assets/scss/bootstrap/buttons";
+@import "./assets/scss/bootstrap/cards";
+@import "./assets/scss/bootstrap/dropdown";
+@import "./assets/scss/bootstrap/forms";
+@import "./assets/scss/bootstrap/grid";
+@import "./assets/scss/bootstrap/input-group";
+@import "./assets/scss/bootstrap/nav";
+@import "./assets/scss/bootstrap/pagination";
+@import "./assets/scss/bootstrap/popover";
+@import "./assets/scss/bootstrap/progress";
+@import "./assets/scss/bootstrap/table";
+
+/* ############### CUSTOM ELEMENT STYLES ############### */
+@import "./assets/scss/custom/buttons";
+@import "./assets/scss/custom/charts";
+@import "./assets/scss/custom/forms";
+@import "./assets/scss/custom/image";
+@import "./assets/scss/custom/list";
+@import "./assets/scss/custom/nav";
+
+/* ############### CUSTOM VENDOR STYLES ############### */
+@import "./assets/scss/lib/select2";
+@import "./assets/scss/lib/spectrum";
+
+/* ############### PAGE LAYOUT STYLES ############### */
+@import "./assets/scss/layout/content";
+@import "./assets/scss/layout/footer";
+@import "./assets/scss/layout/global";
+@import "./assets/scss/layout/header";
+@import "./assets/scss/layout/iconbar";
+@import "./assets/scss/layout/navbar";
+@import "./assets/scss/layout/navbar-variant";
+@import "./assets/scss/layout/sidebar";
+
+/* ############### TEMPLATE STYLES ############### */
+@import "./assets/scss/template/demo";
+
+@import "./assets/scss/template/calendar";
+@import "./assets/scss/template/chat";
+@import "./assets/scss/template/contacts";
+@import "./assets/scss/template/invoice";
+@import "./assets/scss/template/mail";
+@import "./assets/scss/template/mail-two";
+@import "./assets/scss/template/profile";
+@import "./assets/scss/template/signin";
+@import "./assets/scss/template/signup";
+@import "./assets/scss/template/error";
+
+/* ############### DASHBOARD STYLES ############### */
+@import "./assets/scss/template/dashboard-one";
+@import "./assets/scss/template/dashboard-two";
+@import "./assets/scss/template/dashboard-three";
+@import "./assets/scss/template/dashboard-four";
+@import "./assets/scss/template/dashboard-five";
+@import "./assets/scss/template/dashboard-six";
+@import "./assets/scss/template/dashboard-seven";
+@import "./assets/scss/template/dashboard-eight";
+@import "./assets/scss/template/dashboard-nine";
+@import "./assets/scss/template/dashboard-ten";
+
+/* ############### UTILITIES/HELPER CLASSES ############### */
+@import "./assets/scss/util/background";
+@import "./assets/scss/util/border";
+@import "./assets/scss/util/height";
+@import "./assets/scss/util/margin";
+@import "./assets/scss/util/misc";
+@import "./assets/scss/util/padding";
+@import "./assets/scss/util/position";
+@import "./assets/scss/util/typography";
+@import "./assets/scss/util/width";
+
+/* ############### PLUGIN STYLES ############### */
+// @import "~morris.js/morris.css";
+// @import "~datatables.net-dt/css/jquery.dataTables.css";
+// @import '~@fullcalendar/core/main.css';
+// @import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+
+
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+//@import 'node_modules/animation.css/main';
+@import './media.scss';
+// @import '@core/scss/core.scss';
+
+
+@font-face {
+  font-family: "Montserrat-light";
+  src: url("./assets/font/Montserrat-Arabic-Light.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url("./assets/font/Montserrat-Arabic-Bold.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat-light' !important;
+  scroll-behavior: smooth !important;
+  font-size: 16px !important;
+  line-height: 25px !important;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.btn,.navbar-toggler{
+outline: none !important;
+}
+[dir="ltr"]  body{
+  text-align: left;
+}
+[dir="rtl"]  body{
+  text-align: right;
+}
+.home-icon{
+  color: #0b579c;
+  font-size: 40px;
+
+}
+.home-text{
+  color: #0b579c;
+  font-size: 36px;
+  font-family: Montserrat-bold;
+}
+
+.hometitle{
+  color: #0b579c;
+  font-size: 18px;
+ font-family: Montserrat-bold;
+  // margin-top: 30px;
+}
+.pointer {cursor: pointer;}
+:root {
+  --secondary-color: #00acd3;
+  --primary-color: #0b579c;
+}
+
+a {
+  text-decoration: unset !important;
+}
+.fa-25 {
+  font-size: 25px;
+}
+.fa-26 {
+  font-size: 26px;
+}
+.font-28{
+  font-size: 28px;
+}
+.first-card {
+  color: #fff;
+  margin-top: 30px;
+}
+.red-color {
+  color: red;
+}
+
+.main-color {
+  color: var(--primary-color);
+}
+.bg-main-color {
+  background-color: var(--primary-color);
+}
+.btn-xclusive-main{
+  background-color: var(--primary-color);
+  border-color:  var(--primary-color);
+  color: #fff;
+  width: 100%;
+ // border-bottom-left-radius:  calc(0.3rem - 1px);
+
+}
+.btn-xclusive-second{
+  background-color: var(--secondary-color);
+  border-color:  var(--secondary-color);
+  color: #fff;
+  width: 100%;
+  // border-top-left-radius: calc(0.3rem - 1px);
+  //border-bottom-right-radius:  calc(0.3rem - 1px);
+
+}
+.btn-xclusive-stepper{
+  background-color: var(--primary-color);
+  border-color:  var(--primary-color);
+  color: #fff;
+}
+.category {
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px;
+  transition: all 0.2s ease-in-out;
+
+  a {
+    color: var(--primary-color);
+    font-size: 16px;
+  }
+
+  &:hover,&:active {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-color: var(--primary-color);
+    color:#fff;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+.header-pages{
+  background-image: url('./assets/img/Xcluisves-Website-Gradient-Background-scaled\ \(1\).jpeg');
+  background-size: cover;
+  color: white;
+  height: 200px;
+} .title-h1 {
+  font-size: 50px;
+  font-family: "Montserrat-bold" !important;
+}
+h3{
+  font-size: 26px !important;
+  color: #0b579c;
+  font-family: "Montserrat-bold" !important;
+}
+.card-header{
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  }
+  .modal-header {
+    border-bottom: none !important;
+  }
+  .modal-body p{
+    font-size: 14px !important;
+  }
+  .download {
+    background: linear-gradient(to right bottom, rgb(11, 87, 156), rgb(0, 172, 211));
+    padding: 120px 20px;
+  }
+
+  .download i {
+    font-size: 48px;
+    color: #fff;
+  }
+
+  .download .first {
+    font-size: 28px;
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  .download .second {
+    font-size: 16px;
+    color: #fff;
+    // margin-top: 30px;
+  }
+  #tabs .nav-tabs .nav-link.active{
+    color: #fff!important;
+    background-color: #0b579c !important;
+    border-color: #0b579c #0b579c #fff !important;
+  }
+  .nav-tabs .nav-link{
+    color: #0b579c !important;
+  }
+  .home-exclusive-card{
+    text-align: center;
+    margin: 16px;
+  }
+  .main{
+   z-index: -1;
+  }
+  .nav-mobile{
+    display: none;
+  }
+  .footer-img{
+    width:auto;
+  }
+  @media (max-width: 767px){
+    body{
+      font-size: 14px !important;
+    }
+    h2, .title-h2, .download .first, .home-text, .title-h1, div .text-uppercase, .font-28 {
+      font-size: 23px;
+      text-align: center;
+    }
+  .card-img-home{
+    width: 220px;
+    height:  220px;
+  }
+  .apple-btn{
+    // width: 124px;
+   // height: 60px;
+  }
+.footer-img{
+width: 110px ;
+}
+.category {
+  font-size: 12px;
+}
+.brand-name{
+  font-size: 16px !important;
+}
+// .time-box{
+//   max-width: 60px;
+//   max-height: 100px;
+// }
+.nav-mobile{
+  display: block;
+}
+#navbar{
+  display: none;
+}
+  }
+  .mat-drawer-container {
+     background-color: #fff;
+  }
+#map {
+  height: 800px;
+  width: 100%;
+}
+.modal-backdrop.show{
+   //  z-index:-3;
+   // z-index:0;
+}
+/*.modal.show .modal-dialog {
+  z-index:5;
+}*/
+.card-brand .card-body {
+  padding: 0 !important;
+}
+.nav li .az-menu-sub .a-dropdown {
+  display: block !important;
+}
+[dir="ltr"] .inner-div{
+  position: absolute;
+  bottom:  -18px;
+  left: 0;
+
+}
+[dir="rtl"] .inner-div{
+  position: absolute;
+  bottom:  -18px;
+  right: 0;
+}
+.az-header-menu .nav-item > .nav-link.with-sub::after {
+  display: none;
+}
+
+.typcn,.rightimg {
+ display: none;
+}
+.apple-btn{
+ width: 100%;
+}
+// [dir=ltr] .az-menu-sub  .nav-link:hover{
+//   //  border-left: 3px solid var(--primary-color);
+//   padding-left: 5px !important;
+//   width: 100% !important;
+//   transition: .3s;
+//   background-color: red !important;
+// }
+// [dir=rtl] .az-menu-sub .nav-link:hover{
+//   //  border-right: 3px solid var(--primary-color);
+//   padding-right: 5px !important;
+//   width: 100% !important;
+//   transition: .3s;
+//    background-color: red !important;
+// }
+.az-header{
+  position: sticky;
+}
+.nav-item-p-rtl{
+  margin-right: 16px;
+}
+.nav-item-p-ltr{
+  margin-right: 0px;
+}
+@media (max-width: 992px){
+.typcn,.rightimg {
+  display: flex;
+ }
+
+ .az-header-menu > .nav {
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 15%;
+  align-items: center;
+
+  // margin-right: 25%;
+  // margin-left: 25%;
+}
+[dir="ltr"] .az-header-menu .nav-item > .nav-link .typcn {
+  font-size: 20px;
+  line-height: 14px;
+  height: 14px;
+  margin-right: 15px;
+  width: 16px;
+}
+[dir="rtl"] .az-header-menu .nav-item > .nav-link .typcn {
+  font-size: 20px;
+  line-height: 14px;
+  height: 14px;
+  margin-left: 15px;
+  width: 16px;
+}
+}
+
+@media (max-width: 394px){
+  .az-header-menu > .nav {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 15%;
+    align-items: center;
+
+    // margin-right: 20%;
+    // margin-left: 20%;
+  }
+  [dir="ltr"] .az-header-menu .nav-item > .nav-link .typcn {
+    font-size: 20px;
+    line-height: 14px;
+    height: 14px;
+    margin-right: 10px;
+    width: 16px;
+  }
+  [dir="rtl"] .az-header-menu .nav-item > .nav-link .typcn {
+    font-size: 20px;
+    line-height: 14px;
+  height: 14px;
+    margin-left: 10px;
+    width: 16px;
+  }
+  .az-header-menu .nav-item > .nav-link{
+    font-size: 12px;
+  }
+}
+.mat-form-field-infix {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 0;
+  width: 100%;
+}
+@media (max-width: 200px){
+.nav-item-p-rtl{
+  margin-right: 0px;
+}
+}
+@media (max-width:300px){
+  .category2{
+    font-size: 9px;
+  }
+}
+.mat-form-field-infix {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 0;
+  width: 100% !important;
+}
+.card-animation {
+	-moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-animation:hover {
+	-webkit-transform: translate(0, -8px);
+	-moz-transform: translate(0, -8px);
+	-ms-transform: translate(0, -8px);
+	-o-transform: translate(0, -8px);
+	transform: translate(0, -8px);
+	box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
+}
+.widthAuto{
+    width:unset;
+}

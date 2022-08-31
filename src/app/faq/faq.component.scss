@@ -1,0 +1,40 @@
+// .accordion-button::after {
+//   // background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+//  content: '+';
+//   transform: scale(.7) !important;
+//   color: #fff;
+//   background-image:none !important;
+//   font-size: 35px;
+// }
+// .accordion-button:not(.collapsed)::after {
+//   // background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+//  content: '-';
+//   color: #fff;
+//   background-image:none !important;
+//   font-size: 35px;
+
+// }
+.accordion-button:not(.collapsed) ,.accordion-button{
+  background-color: #5aa1e3 !important;
+  color: #fff;
+  font-family: "Montserrat-bold" !important;
+  // display: flex;
+  // justify-content: space-between;
+}
+.accordion-item{
+  margin-bottom: 20px;
+}
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+::ng-deep {
+   mat-expansion-panel-header{
+    background-color: #5aa1e3 !important;
+    font-family: "Montserrat-light" !important;
+    font-weight: 400!important;
+   }
+   .mat-expansion-panel-header-title{
+    font-weight: 400!important;
+   }
+
+}

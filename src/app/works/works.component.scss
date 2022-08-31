@@ -1,0 +1,22 @@
+// .img-two{
+// width: 445px;
+// height: 500px;
+// }
+.btn-works{
+  height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    font-size: 19px;
+    margin-bottom: 0px;
+
+}
+@media (max-width: 767px){
+.btn-works{
+    padding: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    height: auto;
+    margin-bottom: 8px;
+}
+}
+

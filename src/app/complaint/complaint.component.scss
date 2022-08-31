@@ -1,0 +1,22 @@
+.mat-form-field {
+  margin-top: 16px;
+}
+::ng-deep {
+  .mat-form-field{
+    display: inherit !important;
+  }
+  .mat-radio-button{
+   // display: block !important;
+   margin: 10px;
+  }
+  .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color:var(--primary-color);
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: var(--primary-color);
+}
+  }
+  .card-img-home{
+    width: 400px;
+    height:  400px;
+  }

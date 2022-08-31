@@ -1,0 +1,131 @@
+<div class="header-pages d-flex justify-content-center align-items-center">
+  <h1 class="title-h1">JOIN OUR MERCHANTS</h1>
+</div>
+<p class="text-center">Are you a business owner interested in joining the Xclusives Merchant Network?</p>
+<p class="text-center">If you are, then great! You can fill in the application form below to get started!</p>
+
+<div class="container">
+  <mat-stepper linear #stepper class="py-5">
+    <mat-step [stepControl]="firstFormGroup" >
+      <form [formGroup]="firstFormGroup" autocomplete="off">
+        <ng-template matStepLabel>Personal Information</ng-template>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.CustomerName" matInput formControlName="name" required>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Email Address</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.Email" email="true" matInput formControlName="email" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row d-flex align-items-center">
+
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Mobile Number</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.Mobile" BlockPaste numberOnly matInput formControlName="phone" required>
+            </mat-form-field>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Gender</mat-label>
+              <mat-select (selectionChange)="selectedGender($event)" formControlName="selectGender">
+                <mat-option [value]="1">
+                  Male
+                </mat-option>
+                <mat-option [value]="2">
+                  Female
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <!-- <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1" (change)="onGenderChange(1)">Male</mat-radio-button>
+              <mat-radio-button value="2" (change)="onGenderChange(2)">Female</mat-radio-button>
+            </mat-radio-group>
+          </div> -->
+        </div>
+
+        <div class="d-flex justify-content-end align-items-center">
+          <!-- <p>Go to a different step to see the error state</p> -->
+          <button mat-button matStepperNext
+            class="btn-xclusive-stepper rounded">Next</button>
+        </div>
+
+      </form>
+    </mat-step>
+    <mat-step>
+      <form  autocomplete="off" #form="ngForm">
+        <ng-template matStepLabel>Business Information</ng-template>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Business Name</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.BusinessName" name="BusinessName" matInput  required>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Business Commercial Name</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.CommercialName" name="Commercial" matInput  required>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Number of Branches</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.NumberOfBranches" name="NumberOfBranches" matInput  type="number" required>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <mat-form-field appearance="fill">
+              <mat-label>Website/Social Media Page Link</mat-label>
+              <input [(ngModel)]="joinMerchantWeb.WebsiteLink" matInput name="website" #website="ngModel" required>
+              <div *ngIf="form.submitted && website.invalid" class="invalid-feedback">
+                <div *ngIf="website.errors?.required">Website is required</div>
+
+            </div>
+            </mat-form-field>
+          </div>
+          <!-- <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+            <ngx-recaptcha site_key="<GOOGLE_RECAPTCHA_SITE_KEY>"></ngx-recaptcha>
+          </div> -->
+
+          <div class="row mt-3">
+            <div class="col-sm-12 mb-2">
+              <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+              <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
+                <div *ngIf="recaptcha.errors?.required">This field is required.</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="d-flex justify-content-between align-items-centter">
+          <!-- <p>Go to a different step to see the error state</p> -->
+          <button mat-button matStepperPrevious class="btn-xclusive-stepper">Back</button>
+          <button mat-button matStepperNext class="btn-xclusive-stepper" (click)="send(form)">
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p class="text-center">You are now done.</p>
+      <div class="d-flex justify-content-between align-items-centter">
+        <button mat-button matStepperPrevious class="btn-xclusive-stepper">Back</button>
+        <!-- <button mat-button (click)="stepper.reset()" class="btn btn-xclusive-main">Reset</button> -->
+        <button mat-button class=" btn-xclusive-stepper" (click)="onSubmit()">Send</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

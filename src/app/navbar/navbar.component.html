@@ -1,0 +1,159 @@
+<div class="az-header sticky-top">
+  <div class="container-fluid">
+    <div class="az-header-left">
+      <a routerLink="/" class="az-logo"><span></span> <img
+          src="../../assets/img/logo_2c448879fece8b7f6463c6566ddcb9b8_1x (1).png" alt="" srcset=""></a>
+      <a href="#" id="azMenuShow" (click)="toggleHeaderMenu($event)"
+        class="az-header-menu-icon d-lg-none"><span></span></a>
+    </div><!-- az-header-left -->
+    <div class="az-header-menu">
+      <div class="az-header-menu-header">
+        <a routerLink="/" class="az-logo"><span></span>
+          <img src="../../assets/img/logo_2c448879fece8b7f6463c6566ddcb9b8_1x (1).png" alt="" srcset="">
+        </a>
+        <a href="#" (click)="toggleHeaderMenu($event)" class="close">&times;</a>
+      </div><!-- az-header-menu-header -->
+      <ul class="nav">
+        <li class=" nav-item" ngbDropdown [ngClass]="{ 'active': works.isActive }">
+
+          <a routerLink="/works" routerLinkActive="active" #works="routerLinkActive" class="nav-link text-uppercase">
+            <i class="bi bi-credit-card material-icons typcn"></i>
+            <span class="">{{'navbar.how' |translate}}</span></a>
+        </li>
+        <!-- <li class="nav-item" ngbDropdown>
+          <a routerLink="/card" routerLinkActive="active" class="nav-link text-uppercase"
+            [ngClass]="('currentTheme' | translate ) === 'rtl' ? 'nav-item-p-rtl' : 'nav-item-p-ltr'">
+            {{'navbar.get the card' | translate}}</a>
+        </li> -->
+        <li class="nav-item" ngbDropdown [ngClass]="{ 'active': all.isActive }">
+          <a routerLink="/alldeals" routerLinkActive="active" #all="routerLinkActive" class="nav-link text-uppercase"
+            [ngClass]="('currentTheme' | translate ) === 'rtl' ? 'nav-item-p-rtl' : 'nav-item-p-ltr'">
+            <!-- <span class="material-icons">
+              card_giftcard
+            </span> -->
+            <i class="bi bi-gift-fill material-icons typcn"></i>
+            <span class="">{{'navbar.Monthly Deals' | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item" ngbDropdown [ngClass]="{ 'active': flash.isActive }">
+          <a routerLink="/flashdeals" routerLinkActive="active" #flash="routerLinkActive"
+            class="nav-link text-uppercase">
+            <span class="material-icons typcn">
+              bolt
+            </span>
+            {{'navbar.Flash Deals' |translate}}</a>
+        </li>
+        <li class="nav-item" ngbDropdown [ngClass]="{ 'active': download.isActive }">
+          <a routerLink="/download" routerLinkActive="active" #download="routerLinkActive"
+            class="nav-link text-uppercase">
+            <span class="material-icons typcn">
+              system_update
+            </span>
+            {{'navbar.Download the App' | translate}}</a>
+        </li>
+        <li class="nav-item" ngbDropdown
+            [ngClass]="{'active':  apply.isActive ||  career.isActive || merchant.isActive  || complaint.isActive }">
+          <!--[ngClass]="{'active':  apply.isActive ||  career.isActive || merchant.isActive  || complaint.isActive || blog.isActive}">-->
+          <a class="nav-link with-sub text-uppercase" id="pagesDropdown" ngbDropdownToggle>
+            <!-- <span class="material-icons">
+    perm_phone_msg
+    </span> -->
+            {{'navbar.contact us' |translate}}
+            <i class="material-icons typcn">
+              expand_more
+            </i>
+          </a>
+          <nav class="az-menu-sub my-menu" ngbDropdownMenu aria-labelledby="pagesDropdown">
+            <!-- <a routerLink="/general-pages/signin" class="nav-link">Sign In</a>
+    <a routerLink="/general-pages/signup" class="nav-link">Sign Up</a> -->
+            <a routerLink="/apply" class="nav-link" routerLinkActive="active" #apply="routerLinkActive">
+              {{'navbar.get the card' | translate}}
+            </a>
+            <a routerLink="/career" class="nav-link" routerLinkActive="active" #career="routerLinkActive">
+              {{'navbar.Career Join us'|translate}}
+            </a>
+            <a routerLink="/merchant" class="nav-link" routerLinkActive="active" #merchant="routerLinkActive">
+              {{'navbar.Join our Merchants' |translate}}
+            </a>
+            <a routerLink="/complaint" class="nav-link" routerLinkActive="active"
+               #complaint="routerLinkActive">{{'navbar.Complaint' | translate}}</a>
+            <!--<a routerLink="/blog" class="nav-link" routerLinkActive="active" #blog="routerLinkActive">Blog &
+      Review</a>-->
+          </nav>
+        </li>
+        <li class="nav-item" ngbDropdown [ngClass]="{ 'active': faq.isActive }">
+          <a routerLink="/faq" routerLinkActive="active" #faq="routerLinkActive" class="nav-link text-uppercase">
+            <span class="material-icons typcn">
+              quiz
+            </span>
+            {{'navbar.faq' | translate}}</a>
+        </li>
+        <li class="nav-item" ngbDropdown>
+          <a (click)="setLang()" class="nav-link d-flex justify-content-start align-items-center"><img [src]="langImage"
+              class=" text-uppercase" alt="" srcset="">{{'navbar.language' |
+            translate}}</a>
+        </li>
+
+      </ul>
+    </div><!-- az-header-menu -->
+    <div class="az-header-right rightimg">
+      <a routerLink="/" class="az-logo"><span></span> <img
+          src="../../assets/img/logo_2c448879fece8b7f6463c6566ddcb9b8_1x (1).png" alt="" srcset="" class=""></a>
+    </div>
+
+  </div><!-- container -->
+</div><!-- az-header -->
+<!-- <nav class="nav-mobile sticky-top">
+  <div class=" top-sidenav d-flex justify-content-between align-items-center p-2">
+    <img src="../../assets/img/logo_df053aa66c72dfd11b3d241ff8098d13_1x.png" alt="">
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; </span>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <div class="d-flex justify-content-between align-items-center">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <a href=""> <img src="../../assets/img/logo_df053aa66c72dfd11b3d241ff8098d13_1x.png" alt=""></a>
+    </div>
+    <div class="d-flex flex-column justify-content-start align-items-center">
+      <li class="nav-item" routerLink="/works">
+        <a class="nav-link text-uppercase  links">{{'navbar.how' |
+          translate}}</a>
+      </li>
+
+      <li class="nav-item" routerLink="/card">
+        <a class="nav-link text-uppercase  links">{{'navbar.get the card' |
+          translate}}</a>
+      </li>
+
+      <li class="nav-item" routerLink="/alldeals">
+        <a class="nav-link text-uppercase  links">{{'navbar.Monthly Deals' |
+          translate}}</a>
+      </li>
+      <li class="nav-item" routerLink="/flashdeals">
+        <a class="nav-link text-uppercase  links">{{'navbar.Flash Deals' |
+          translate}}</a>
+      </li>
+      <li class="nav-item" routerLink="/download">
+        <a class="nav-link text-uppercase  links">{{'navbar.Download the App' |
+          translate}}</a>
+      </li>
+      <li class="nav-item">
+        <button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </li>
+      <li class="nav-item" routerLink="/faq">
+        <a class="nav-link text-uppercase  links" routerLinkActive="'active'">{{'navbar.faq' |
+          translate}}</a>
+      </li>
+
+      <li class="nav-item">
+        <a (click)="setLang()" class="nav-link text-uppercase links"><img [src]="langImage" class="m-1 links" alt=""
+            srcset="">{{'navbar.language' | translate}}</a>
+      </li>
+
+    </div>
+
+  </div>
+</nav> -->
